@@ -1,4 +1,4 @@
-﻿# Parry-It-Easy-
+﻿# Parry-It-Easy
 
 This C++ program solves a combat-style decision problem where, for each enemy (test case), you must decide to **either dodge** or **parry**. Each action has a skill threshold. Here's a concise explanation:
 
@@ -39,4 +39,6 @@ The goal is to **maximize the number of parries** you can make while still being
 
 For each test case, print the **maximum number of parries** that still allow survival through all enemies.
 
-Let me know if you’d like a [step-by-step walkthrough](f) or [visual explanation of dodge vs parry logic](f).
+This program determines how many enemies a player can parry (instead of just dodging) while still surviving through all N enemies, given an initial skill level X. For each enemy, dodging requires a skill ≥ A[i], while parrying requires a skill ≥ B[i] and consumes 1 skill point. The program calculates a need[] array backward, which stores the minimum skill required at each point to survive the remaining enemies optimally, choosing the cheaper of dodge or parry for each.
+
+Then it simulates the battle from the beginning using the initial skill X. At each step, it checks whether parrying is possible without losing the ability to finish the game. If so, it parries and counts it; otherwise, it checks if dodging is possible. If neither is possible, it breaks out and reports 0. The result is the maximum number of parries that can be performed while ensuring the player survives all enemy encounters.
