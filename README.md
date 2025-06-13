@@ -1,4 +1,4 @@
-﻿# Parry-It-Easy
+### Parry-It-Easy
 
 This C++ program solves a combat-style decision problem where, for each enemy (test case), you must decide to **either dodge** or **parry**. Each action has a skill threshold. Here's a concise explanation:
 
